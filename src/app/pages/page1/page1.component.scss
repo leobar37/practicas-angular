@@ -4,6 +4,9 @@ $sans :  'Open Sans', sans-serif;
 // .pageone{
 //     // position: relative;
 // }
+.general{
+    position: relative;
+}
 .section1{
     //  position: relative;
     .content{
@@ -47,33 +50,31 @@ $sans :  'Open Sans', sans-serif;
 /*=============================================
 =            segunda pagina            =
 =============================================*/
-.pagedos
-{
-    background-color: white;
+.caja{
+    border: 10px solid white;
+    background-color: black;
+    color: white;
     height: 1000px;
      display: flex;
      flex-direction: row;
      justify-content: center;
      align-items: center;
 }
-
 .nextaPage{
     // border: 2px solid white;
     position: absolute;
-    bottom: 4rem;
+    // bottom: 4rem;
+    top: 90vh;
     // left:  calc(100% -20%);
     right: 5rem;
    z-index: 10000;
+   i{
+    font-size: 50px;
+    color: white;
 }
-.nextaPage{
-    &:hover{
-        cursor: pointer;     
-   }
+&:hover{
+    cursor: pointer;     
+ transform: translate();
 }
-.nextaPage{
-    i{
-        font-size: 50px;
-        color: white;
-    }
-    
 }
+
