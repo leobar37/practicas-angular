@@ -1,0 +1,79 @@
+$another  : 'Another Round' ;
+$roboto : 'Roboto', sans-serif;
+$sans :  'Open Sans', sans-serif;
+// .pageone{
+//     // position: relative;
+// }
+.section1{
+    //  position: relative;
+    .content{
+        height: 49vh;
+        // border: 2px solid wheat;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .cont_texto{
+    //   border:  2px solid white;
+    margin-top: 40px;
+        .principal{
+            margin-left: 1.5rem;
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+        .extracto{
+           margin-left: 3rem;
+           color: white;
+           font-family: $sans;
+           width: 60%;
+           font-size: 18px;
+        }
+        .palito{
+          //  border: 2px solid white;
+           position: relative;
+        }
+        .palito::after{
+           position: absolute;
+           top: 0;
+           width: 10px;
+           height: 100%;
+           background: white;
+           content: "";
+        }
+    }
+}
+/*=============================================
+=            segunda pagina            =
+=============================================*/
+.pagedos
+{
+    background-color: white;
+    height: 1000px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}
+
+.nextaPage{
+    // border: 2px solid white;
+    position: absolute;
+    bottom: 4rem;
+    // left:  calc(100% -20%);
+    right: 5rem;
+   z-index: 10000;
+}
+.nextaPage{
+    &:hover{
+        cursor: pointer;     
+   }
+}
+.nextaPage{
+    i{
+        font-size: 50px;
+        color: white;
+    }
+    
+}
