@@ -10,6 +10,7 @@ export const desactivar_modal = ()=>{
         load.removeClass('load');
         let body =  document.body;
         body.style.overflowY = 'visible';
+     
         load.addClass('esconderload');
 }
 

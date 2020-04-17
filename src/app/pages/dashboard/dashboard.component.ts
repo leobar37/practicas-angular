@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
+import { Router } from '@angular/router';
+import { desactivar_modal } from '../../../scripts/alternos';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,17 +10,25 @@ import { Observable, Observer } from 'rxjs';
 })
 export class DashboardComponent implements OnInit {
   contadores: number[]=[];
-  constructor() {
+  constructor( 
+    private router:Router
+  ) {
+
+    // desactivar_modal();
   }
   
   ngOnInit(){
     // this.eventos();
+    //       const $increment = document.querySelector('#increment');
 
+  }
+  navegar(){
+    console.log('click');
+    this.router.navigate(['/portafolio']);
   }
 
   // eventos(){
  
-  //       const $increment = document.querySelector('#increment');
   //       // const fromEvent = new FromEvent($increment, "click");
   //       //este es una funcion de orden mayor
   //       /*

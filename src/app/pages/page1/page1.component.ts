@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { cargarEstilos, cargarScripts } from "src/scripts/dependencias";
 import jump from "jump.js";
 import { activar_modal, desactivar_modal, animateCSS } from '../../../scripts/alternos';
-
+// import  {  $  } from 'jquery';
 declare function stickyStack();
 declare var stackedCards: any;
 declare function iconate(valor1: any, valor2: any): any;
@@ -30,17 +30,14 @@ export class Page1Component implements OnInit {
     await cargarScripts(this.scripts, "page1");
     this.animacionesScroll();
     desactivar_modal();
+    console.log('se desactivo el modal');
     this.loading = false;
   }
   animacionesScroll() {
-    
     //animaciones
     //menu animacion
     animateCSS('.content' ,'bounceInRight')
-    animateCSS('.menu' ,'bounceInLeft', null ,()=>{
-      // animateCSS('.menu' ,'bounceInDown');
-      // animateCSS('.cont_texto' ,'bounceInDown');
-    });
+    animateCSS('.menu' ,'bounceInLeft', null);
     //desactivar el scroll
     //efcto de tarjetas
     var stackedCard = new stackedCards({
@@ -56,28 +53,48 @@ export class Page1Component implements OnInit {
     let $nextPage = $(".nextaPage");
     let secciones = $('.main-content-wrapper section'); 
     let cont =  0;
-    $nextPage.on("click", () => {
-      //manejar el scrooll
-       cont+=1000; 
-       let $next = $('.nextaPage i');
-        if(cont >= ((secciones.length * 1000) - 2000)){
-           $next.removeClass('fa-arrow-right');
-           $next.addClass('fa-angle-double-up');
-          }
-          if(cont >= ((secciones.length * 1000) -1000)){
-            cont =0;   
-            $next.removeClass('fa-angle-double-up');
-             setTimeout(()=>{
-              $next.addClass('fa-arrow-right');
-             } , 1000)
-         }
-      let cantScroll = $(window).scrollTop();
-       let cantSumar = cont- cantScroll;
-       window.scroll({
-        top: cantScroll+ cantSumar,
-        behavior: "smooth",
-      });
-    });
+    let resto = 0 ;
+    //manejar el scrooll
+     $(document).on('scroll', ()=>{
+      let bar= $(window).scrollTop();
+       resto =  bar; 
+    })
+ $nextPage.on("click", () => {
+   //cambiar icono 
+    const upIcono = ()=>{
+      let $next = $(".nextaPage i");
+      if (cont >= secciones.length * 1000 - 2000) {
+        $next.removeClass("fa-arrow-right");
+        $next.addClass("fa-angle-double-up");
+      }
+      if (cont >= secciones.length * 1000 - 1000) {
+        cont = 0;
+        $next.removeClass("fa-angle-double-up");
+        setTimeout(() => {
+          $next.addClass("fa-arrow-right");
+        }, 1000);
+      }
+    } 
+  let pal = $(window).scrollTop();
+   //modulo del contador
+   let com1 = parseInt(String(cont / 1000), 10);
+   //modulo del scroll
+   let com2 = parseInt(String(pal / 1000), 10);
+   if(com1 != com2){
+     cont = com2*1000;
+     cont += 1000;
+   }else{
+     cont += 1000;
+   }
+   upIcono();
+   let cantScroll = $(window).scrollTop();
+   //medida a avanzar en el scroll
+   let cantSumar = cont - resto;
+   window.scroll({
+     top: cantScroll + cantSumar,
+     behavior: "smooth",
+   });
+ });
     //fin
     //scrooll
     const scrollMove = (element :HTMLElement , referencia:HTMLElement ) =>{
@@ -87,7 +104,6 @@ export class Page1Component implements OnInit {
       })
     }   
     let itemsMenu =  $('.menu li');
-   
   for (let i = 1; i < itemsMenu.length ; i++) {
      scrollMove(itemsMenu[i] ,  secciones[i]);
   }
@@ -100,6 +116,4 @@ export class Page1Component implements OnInit {
        })
  }) 
 }
- 
-
 }
