@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 import { Router } from '@angular/router';
-import { desactivar_modal } from '../../../scripts/alternos';
+import { desactivar_modal } from 'src/app/scripts/alternos';
+
 
 @Component({
   selector: 'app-dashboard',

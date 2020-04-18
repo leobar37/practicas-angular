@@ -1,80 +1,83 @@
-$another  : 'Another Round' ;
-$roboto : 'Roboto', sans-serif;
-$sans :  'Open Sans', sans-serif;
+$another: "Another Round";
+$roboto: "Roboto", sans-serif;
+$sans: "Open Sans", sans-serif;
 // .pageone{
 //     // position: relative;
 // }
-.general{
-    position: relative;
+.general {
+  position: relative;
 }
-.section1{
-    //  position: relative;
-    .content{
-        height: 49vh;
-        // border: 2px solid wheat;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .cont_texto{
+.section1 {
+  //  position: relative;
+  .content {
+    height: 49vh;
+    // border: 2px solid wheat;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cont_texto {
     //   border:  2px solid white;
     margin-top: 40px;
-        .principal{
-            margin-left: 1.5rem;
-            width: 30%;
-            img{
-                width: 100%;
-            }
-        }
-        .extracto{
-           margin-left: 3rem;
-           color: white;
-           font-family: $sans;
-           width: 60%;
-           font-size: 18px;
-        }
-        .palito{
-          //  border: 2px solid white;
-           position: relative;
-        }
-        .palito::after{
-           position: absolute;
-           top: 0;
-           width: 10px;
-           height: 100%;
-           background: white;
-           content: "";
-        }
+    .principal {
+      margin-left: 1.5rem;
+      width: 30%;
+      img {
+        width: 100%;
+      }
     }
+    .extracto {
+      margin-left: 3rem;
+      color: white;
+      font-family: $sans;
+      width: 60%;
+      font-size: 18px;
+    }
+    .palito {
+      //  border: 2px solid white;
+      position: relative;
+    }
+    .palito::after {
+      position: absolute;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background: white;
+      content: "";
+    }
+  }
 }
 /*=============================================
 =            segunda pagina            =
 =============================================*/
-.caja{
-    border: 10px solid white;
-    background-color: black;
-    color: white;
-    height: 1000px;
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
+.caja {
+  // border: 10px solid white;
+  background-color: black;
+  color: white;
+  height: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.nextaPage{
-    // border: 2px solid white;
+.ctr_arrows {
+  a {
     position: absolute;
-    // bottom: 4rem;
-    top: 90vh;
-    // left:  calc(100% -20%);
-    right: 5rem;
-   z-index: 10000;
-   i{
-    font-size: 50px;
-    color: white;
+    right: 6.8rem;
+    z-index: 10000;
+    i {
+      font-size: 50px;
+      color: white;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  a.dowPage {
+    top: 87vh;
+  
+  }
+  a.upPage {
+    top: 80vh;
+  }
 }
-&:hover{
-    cursor: pointer;     
- transform: translate();
-}
-}
-
