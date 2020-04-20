@@ -1,0 +1,98 @@
+
+ $title : 'Kaushan Script', cursive;
+
+
+ i{
+    color: white;
+    font-size: 140px;
+ }
+.contenedor {
+  // position: absolute;
+  overflow: hidden;
+  // width: 100%;
+  background: black;
+  // height: 100vh;
+.primero{
+  position: relative;
+  height: 100vh;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+ .texto{
+   position: absolute;;
+   color: white;
+   font-size: 55px;
+   font-family: $title;
+  //  transition: position 3s  ease-in-out 2s;
+    &.cumple{
+      top: 35vh;
+    }
+    &.pollito{
+      top: 45vh;
+    }
+}
+
+
+.cont2{
+// border: 2px solid red;
+  width: 100%;
+  position: absolute;
+  height: 25vh;
+  top:  62vh;
+  display: flex;
+  flex-direction: row;
+  .pastel{
+    color: white;
+    // position: absolute;
+    display: none;
+    margin-left: 35rem;
+    top: 60vh;
+ }
+ .img_poll{
+    display: none;
+   width: 150px;
+   margin-left: 4rem;
+    transform: rotate(30deg);
+ }
+}
+}
+.segundo{
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: none;
+  position: relative;
+  .corazon  {
+    width: 750px;
+    top: 25%;
+    left: 40%;
+    position: absolute;
+    i{
+      font-size: 400px;
+    }
+  }
+  .vales{
+    color: white;
+    font-size: 55px;
+    font-family: $title;
+     position:  absolute;
+     top: 5vh;
+     left: 35%;
+  }
+}
+
+}
+.mostrar{
+  display: block !important;
+ }
+.ocultar{
+   display: none !important;
+}
+.invertir-color {
+  -webkit-filter: invert(100%);
+ filter: invert(100%);
+   img{
+      width: 150px;
+   }
+}

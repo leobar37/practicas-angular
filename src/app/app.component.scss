@@ -2,12 +2,11 @@ $another  : 'Another Round' ;
 $roboto : 'Roboto', sans-serif;
 $sans :  'Open Sans', sans-serif;
 .cargar{
-    position: fixed;
+  position: fixed;
 	top: 0;
 	left: 0;
 	height: 100vh;
-    width: 100vw;
-    // z-index: 100;
+  width: 100vw;
 }
 .load{
    width: 100%;
@@ -18,7 +17,6 @@ $sans :  'Open Sans', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
-//   overflow-y: hidden;
   align-items: center;
 }
 .esconderload{

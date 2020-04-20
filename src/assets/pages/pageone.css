@@ -47,16 +47,17 @@ a{
       width: 200px; }
       .pageone .figura2 .social h1 {
         font-family: "Roboto", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: bold;
         padding-bottom: 1rem; }
       .pageone .figura2 .social .icons a {
-        padding: 0 .5rem; }
+        padding: 0 .5rem; 
+         transition: transform 2s ease-in-out 1s;
+      }
         .pageone .figura2 .social .icons a i {
           color: black;
           font-size: 2rem; }
-          .pageone .figura2 .social .icons a i:hover {
-            color: blue; }
+        
   .pageone header .menu {
     margin-top: 18px;
     margin-left: 20%;
@@ -117,16 +118,7 @@ a{
     font-family: "Open Sans", sans-serif;
     width: 60%;
     font-size: 18px; }
-  /* .section1 .cont_texto .palito {
-    position: relative; }
-  .section1 .cont_texto .palito::after {
-    position: absolute;
-    right: 4rem;
-    top: 0;
-    width: 12px;
-    height: 100%;
-    background: white;
-    content: ""; } */
+
   .section1 .subtit {
     color: white;
     font-family: "Roboto", sans-serif;
