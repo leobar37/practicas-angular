@@ -119,7 +119,7 @@ a{
     width: 60%;
     font-size: 18px; }
 
-  .section1 .subtit {
+  .page_tres .subtit {
     color: white;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -127,7 +127,7 @@ a{
     padding-bottom: 20px;
     text-align: center;
     text-transform: uppercase; }
-  .section1 .texto {
+  .page_tres .texto {
     /* border: 2px solid white; */
     color: white;
     position: absolute;
@@ -141,16 +141,16 @@ a{
     background: -moz-linear-gradient(bottom, rgba(19, 21, 19, 0.63) 11%, rgba(19, 21, 19, 0.49) 33%, rgba(19, 21, 19, 0.43) 43%, rgba(19, 21, 19, 0.03) 66%, rgba(19, 21, 19, 0) 87%);
     background: linear-gradient(to top, rgba(19, 21, 19, 0.63) 11%, rgba(19, 21, 19, 0.49) 33%, rgba(19, 21, 19, 0.43) 43%, rgba(19, 21, 19, 0.03) 66%, rgba(19, 21, 19, 0) 87%); 
   }
-  .section1 .textcont {
+  .page_tres .textcont {
     /* border: 2px solid white; */
     padding-top: 11rem; }
-    .section1 .textcont h1 {
+    .page_tres .textcont h1 {
       font-family: "Another Round"; }
-    .section1 .textcont p {
+    .page_tres .textcont p {
       width: 100%;
       font-family: "Open Sans", sans-serif;
       font-size: 16px; }
-    .section1 .textcont .btn_targeta {
+    .page_tres .textcont .btn_targeta {
       padding-top: 10px;
       color: white;
       font-family: "Another Round";

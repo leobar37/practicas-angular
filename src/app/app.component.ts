@@ -10,8 +10,10 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent {
   // title = 'new app';
   constructor(private titulo:Title){
-    titulo.setTitle('new app')
-  
-
+     this.disposeModal();
+  }
+  private  disposeModal(){
+  //   let modal : HTMLDivElement = document.querySelector('.cargar');
+  //  modal.style.display = 'none';
   }
 }

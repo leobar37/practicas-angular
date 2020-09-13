@@ -1,0 +1,57 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [(opened)]="open">
+    <span>
+      <button (click)="sidenav.close()" mat-icon-button>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </button>
+    </span>
+    <div class="list">
+      <mat-list>
+        <mat-list-item> uno </mat-list-item>
+        <mat-list-item> dos</mat-list-item>
+        <mat-list-item> tres</mat-list-item>
+        <mat-list-item> cuatro</mat-list-item>
+      </mat-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="">
+      <mat-toolbar color="primary">
+        <button (click)="open = !open" class="burguer_sidenav" mat-icon-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span style="margin-left: 8rem;">code Evolution</span>
+        <div class="navbar">
+          <span class="item"><a href="">Home</a></span>
+          <span class="item"><a href="">About</a></span>
+          <span class="item"><a href="">Services</a></span>
+        </div>
+        <button mat-icon-button><mat-icon>menu</mat-icon></button>
+      </mat-toolbar>
+      <h1>
+        buttons
+      </h1>
+      <div class="row">
+        <div class="col-md-6">
+          <button mat-raised-button color="accent">
+            Basic
+          </button>
+          <button mat-button color="accent">
+            normal
+          </button>
+          <button mat-stroked-button color="primary">
+            stroke
+          </button>
+          <button mat-stroked-button color="accent">
+            accent
+          </button>
+          <button mat-fab color="primary">
+            warm
+          </button>
+          <button mat-icon-button><mat-icon>menu</mat-icon></button>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

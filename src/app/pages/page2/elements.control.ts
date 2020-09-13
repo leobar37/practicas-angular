@@ -9,7 +9,6 @@ const letters_animation = (texto: string , element:string)=>{
         i++;  
         }else{
             resolve()
-
         }
    }
    mostrarPalabra();
@@ -29,12 +28,12 @@ const  animation_letters = ()=>{
         // 'animation-delay': '0',
         'animation-iteration-count': 'infinite',
      })
-     await letters_animation('You are worth a lot' , '.vales');
+     await letters_animation('you are a very special person to me' , '.vales');
     } ,5000)
 
 }
 export const mainPage2 = async ()=>{
-    await letters_animation('Feliz cumpleaños atrasado' , '.cumple');
-    await letters_animation('pollito' , '.pollito');
+    await letters_animation('Feliz cumpleaños' , '.cumple');
+    await letters_animation('enanita' , '.pollito');
     animation_letters();
 }

@@ -1,14 +1,194 @@
-<!-- <div class="container">
-<div class="" *ngFor="let contador of contadores; let i=index">
-    <h3>contador {{i}}</h3>
-    <h1>{{contador}}</h1>
+<div class="container bg-white">
+  <h1 class="text-dark"> Bootstrap containers</h1>
+</div> 
+<div class="container bg-primary">
+   <h1>Container with margin <pre><code>.container</code></pre></h1>
+</div>
+<div class="salt">
+
+</div>
+<div class="container bg-white">
+  <h1 class="text-danger">.container-md</h1>
+</div>
+<div class="salt">
+
+</div>
+<div class="container bg-white">
+  <h1 class="text-danger">indicates when a container occupies 100%</h1>
+</div>
+<div class="container">
+  <div class="d-print-none">Screen Only (Hide on print only)</div>
+<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+</div>
+<div class="salt">
+
+</div>
+<div class="container bg-white text-dark">
+   <h3 class="text-dark">
+     flex
+   </h3>
+   <h4>d-flex</h4>
+   <div class="d-flex bd-highlight">
+     <div class="card"></div>
+     <div class="card"></div>
+     <div class="card"></div>
+  </div>
+  
+  <h4>d-inline-flex</h4>  
+  <div class="d-inline-flex">
+     <div class="card">
+
+     </div>
+     <div class="card">
+       
+     </div>
+     <div class="card">
+
+     </div>
+  </div>
+  <h4>d-flex flex-column</h4>
+  <div class="d-flex flex-column bd-highlight">
+    <div class="card"><h1>1</h1></div>
+    <div class="card"><h1>2</h1></div>
+    <div class="card"><h1>3</h1></div>
+ </div>
+  <h4>d-flex flex-column-reverse</h4>
+  <div class="d-flex flex-column-reverse bd-highlight">
+    <div class="card"><h1>1</h1></div>
+    <div class="card"><h1>2</h1></div>
+    <div class="card"><h1>3</h1></div>
+ </div>
+  <h4>d-flex flex-column-reverse justify-content-center alig-items-center</h4>
+  <div class="d-flex flex-column-reverse justify-content-center align-items-center bd-highlight">
+    <div class="card"><h1>1</h1></div>
+    <div class="card"><h1>2</h1></div>
+    <div class="card"><h1>3</h1></div>
+ </div>
+  <h4>d-flex flex-column-reverse justify-content-center alig-items-center</h4>
+  <div class="d-flex flex-column-reverse justify-content-center align-items-center bd-highlight">
+    <div class="card"><h1>1</h1></div>
+ </div>
+ <h4>align self</h4>
+ <div class="d-flex flex-row">
+    <div class="box align-self-end">
+      <h2>align-self-end</h2>
+    </div>
+    <div class="box align-self-stretch">
+      <h2>align self stretch</h2>
+    </div>
+    <div class="box align-self-center">
+      <h2>align self center</h2>
+    </div>
+    <div class="card">
+   <h1>3</h1>
+    </div>
+ </div>
+ <h4>flex</h4>
+ <div class="d-flex flex-wrap bd-highlight">
+  <div class="card"><h1>1</h1></div>
+  <div class="card"><h1>2</h1></div>
+  <div class="card"><h1>3</h1></div>
+</div>
+<h4>shadows</h4>
+<div class="d-flex flex-column">
+   <div class="p-3 mb-5 rounded shadow-lg">
+       shadow lg
+   </div>
+   <div class="shadow-sm mb-5 p-3 rounded">
+      shadow sm
+   </div>
+   <div class="shadow-none mb-5 p-3 rounded">
+     shadow-none
+   </div>
+</div>
+<div class="container">
+  <div class="row">
+  
+      <figure class="figure col-md-4">
+         <img class="figure-img img-fluid  rounded" src="assets/imgs/hombre.png" alt="">
+         <figcaption class="figure-caption">
+           description for image
+         </figcaption>
+      </figure>
+      <figure class="figure col-md-4">
+         <img class="figure-img img-fluid  rounded" src="assets/imgs/hombre.png" alt="">
+         <figcaption class="figure-caption">
+           description for image
+         </figcaption>
+      </figure>
+      <figure class="figure col-md-4">
+         <img class="figure-img img-fluid  rounded" src="assets/imgs/hombre.png" alt="">
+         <figcaption class="figure-caption">
+           description for image
+         </figcaption>
+      </figure>
+ 
+    
+  </div>
+  <div class="row">
+     <h1 class="text-center col-md-12  text-uppercase">tables</h1>
+     <table class="table">
+       <thead class="table-dark" >
+         <tr>
+           <th scope="col">numero</th>
+           <th scope="col">item2</th>
+           <th scope="col">item3</th>
+         </tr>
+       </thead>
+       <tbody class="text-dark">
+         <tr>
+           <td>1</td>
+           <td>ejemplo2</td>
+           <td>ejemplo3</td>
+         </tr>
+         <tr>
+           <td>1</td>
+           <td>ejemplo2</td>
+           <td>ejemplo3</td>
+         </tr>
+         <tr>
+           <td>1</td>
+           <td>ejemplo2</td>
+           <td>ejemplo3</td>
+         </tr>
+       </tbody>
+       <tfoot>
+         <tr>
+           <th>numero</th>
+           <th>food</th>
+           <th>food</th>
+         </tr>
+       </tfoot>
+     </table>
+  </div>
+  <div class="row d-flex justify-content-center">
+     <table class="col-md-4 table table-bordered table-dark">
+       <thead>
+         <tr>
+           <th>item 2</th>
+           <th>item 2</th>
+           <th>item 2</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>item 2</td>
+           <td>item 2</td>
+           <td>item 2</td>
+         </tr>
+         <tr>
+           <td scope="row"></td>
+           <td></td>
+           <td></td>
+         </tr>
+       </tbody>
+     </table>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary" type="button">
+      Notifications <span class="badge badge-light">1</span>
+    </button>
+  </div>
 </div>
 </div>
-
-<div id="increment" class="btn btn-primary" style="margin-left: 50px;">
-    incrementar
-</div> -->
-
-<a class="btn btn-primary" (click)="navegar()" style="margin-left: 1000px; margin-top: 500px;">
-     portafolio
-</a>

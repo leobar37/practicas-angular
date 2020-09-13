@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  .item {
+    display: block;
+    margin: 0.2rem 3rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+mat-toolbar {
+  button {
+    margin-left: 8rem;
+  }
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+mat-sidenav,
+mat-sidenav-content {
+  padding: 16px;
+}
+
+mat-sidenav {
+  background-color: lightcoral;
+  width: 200px;
+}
+.burguer_sidenav {
+  position: fixed;
+  left: -4rem;
+}

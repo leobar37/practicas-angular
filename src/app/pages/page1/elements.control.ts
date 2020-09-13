@@ -1,11 +1,16 @@
 import { animateCSS } from 'src/app/scripts/alternos';
 declare function stickyStack();
 declare var stackedCards: any;
-var measure_width = 1000;
-const animaciones = ()=>{
+declare var VanillaTilt:any;
+var measure_width = 800;
+const animations = ()=>{
     animateCSS('.content' ,'bounceInRight')
     animateCSS('.menu' ,'bounceInLeft', null);
     socialAnimate();
+    VanillaTilt.init(document.querySelector(".box"), {
+		max: 25,
+		speed: 400
+	});
 }
 const socialAnimate = ()=>{
     let elements =  $('.pageone .social .icons a i');
@@ -69,15 +74,17 @@ const arrows = ()=>{
         let pal = $(window).scrollTop();
         let com1 = parseInt(String(cont / measure_width), 10);
         let com2 = parseInt(String(pal / measure_width), 10);
-         if(!Number.isInteger(pal / measure_width)){
-             com2++;
-         }
+        if(!Number.isInteger(pal / measure_width)){
+            com2++;
+        }
         if (com1 != com2) {
             cont = com2 * measure_width;
             cont  = cont - measure_width;
         } else {
             cont -= 1000;
         }
+        moveforNumber(com2);
+        console.log(com2);
         if(cont < 0) cont = 0 ;
         let cantScroll = $(window).scrollTop();
         //medida a avanzar en el scroll
@@ -92,12 +99,20 @@ const arrows = ()=>{
 scrollMove();
 arrows();
 };
+const moveforNumber = (pos: number)=>{
+    pos = pos-1;
+    let secciones_cards = $('.main-content-wrapper section');
+    let refElment : any =  secciones_cards[pos];
+     refElment =  $(refElment);
+    window.scroll({ top:  (refElment.offset().top - refElment.height() ), behavior :'smooth'})
+
+}
 const menu_scroll =()=>{
     let secciones_cards = $('.main-content-wrapper section');
     const scrollMove = (element :HTMLElement , referencia:HTMLElement ) =>{
         const refElment =  $(referencia);
         element.addEventListener('click' , ()=>{
-          window.scroll({ top:  (refElment.offset().top + refElment.height() + 100), behavior :'smooth'})
+          window.scroll({ top:  (refElment.offset().top + refElment.height()  ), behavior :'smooth'})
         })
       }
       let itemsMenu =  $('.menu li');
@@ -107,9 +122,10 @@ const menu_scroll =()=>{
 }
 
  export function mainElements(){
-    animaciones();
+    animations();
     ctrl_arrows();
     menu_scroll();
-    floating_letters();
+    floating_letters();  
  }
 
+ 

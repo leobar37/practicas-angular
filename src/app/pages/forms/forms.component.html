@@ -1,0 +1,92 @@
+<div class="box">
+    <h2>welcome angular forms</h2>
+    <form action="" [formGroup]="profileForms">
+        <div class="field">
+            <label for="" class="label">first Name</label>
+            <div class="control">
+                <input formControlName="firstName" type="text" class="input" />
+            </div>
+        </div>
+        <div class="field">
+            <label for="" class="label">edad</label>
+            <div class="control">
+                <input
+                    type="number"
+                    [ngClass]="{
+                        'is-danger': edadValid,
+                        'is-success': !edadValid
+                    }"
+                    formControlName="edad"
+                    class="input"
+                />
+                <span> {{ validNumber | json }} </span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="" class="label">last Name</label>
+            <div class="control has-icons-left">
+                <input formControlName="lastName" type="text" class="input" />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                </span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="" class="label">email</label>
+            <div class="control has-icons-right">
+                <input formControlName="email" type="text" class="input" />
+                <span class="icon is-small is-right">
+                    <i class="far fa-envelope"></i>
+                </span>
+                <span class="help text-danger" *ngIf="emailExists">
+                    este email existe
+                </span>
+            </div>
+        </div>
+        <div class="" formGroupName="address">
+            <div class="field is-grouped">
+                <div class="control">
+                    <label for="" class="label"> street</label>
+                    <input type="text" class="input" formControlName="street" />
+                </div>
+                <div class="control">
+                    <label for="" class="label">city</label>
+                    <input type="text" class="input" formControlName="city" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="" class="label"> ¿casado? </label>
+                    <input type="radio" class="radio" formControlName="state" />
+                </div>
+            </div>
+        </div>
+        <div formArrayName="cuestions">
+            <div
+                class="field"
+                *ngFor="let cuestion of cuestionsData; let i = index"
+            >
+                <div class="control">
+                    <label for="" class="label">
+                        {{ cuestion.cuestion }}
+                    </label>
+                    <input [formControlName]="i" type="text" class="input" />
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-primary">enviar</button>
+            </div>
+        </div>
+    </form>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                {{ profileForms.value | json }}
+                <h3>group valid</h3>
+                <span> {{ profileForms.errors | json }}</span>
+            </div>
+        </div>
+    </div>
+</div>
