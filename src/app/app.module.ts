@@ -21,6 +21,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AdGaleryComponent } from './components/ad-galery/ad-galery.component';
 import { AdtextComponent } from './components/adtext/adtext.component';
 import { DinamicComponent } from './dinamic/dinamic.component';
+import { YouComponent } from './you/you.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -38,6 +39,7 @@ import { DinamicComponent } from './dinamic/dinamic.component';
         AdGaleryComponent,
         AdtextComponent,
         DinamicComponent,
+        YouComponent,
     ],
     imports: [
         HttpClientModule,

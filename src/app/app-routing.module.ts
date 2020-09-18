@@ -9,8 +9,9 @@ import { FormsComponent } from './pages/forms/forms.component';
 import { PaypalComponent } from './pages/paypal/paypal.component';
 import { SlideFrameworComponent } from './pages/slide-framewor/slide-framewor.component';
 import { DinamicComponent } from './dinamic/dinamic.component';
-
+import { YouComponent } from '../app/you/you.component';
 const routes: Routes = [
+    { path: 'you', component: YouComponent },
     { path: 'booststrap', component: DashboardComponent },
     { path: 'landing', component: LandingExampleComponent },
     { path: 'portafolio', component: Page1Component },
@@ -37,7 +38,7 @@ const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '/booststrap',
+        redirectTo: '/you',
     },
 ];
 @NgModule({
