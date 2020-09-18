@@ -8,6 +8,7 @@ import { LandingExampleComponent } from './pages/landing-example/landing-example
 import { FormsComponent } from './pages/forms/forms.component';
 import { PaypalComponent } from './pages/paypal/paypal.component';
 import { SlideFrameworComponent } from './pages/slide-framewor/slide-framewor.component';
+import { DinamicComponent } from './dinamic/dinamic.component';
 
 const routes: Routes = [
     { path: 'booststrap', component: DashboardComponent },
@@ -15,7 +16,6 @@ const routes: Routes = [
     { path: 'portafolio', component: Page1Component },
     { path: 'ramdom', component: Page2Component },
     { path: 'guards', component: SlideFrameworComponent },
-    // { path: '', pathMatch: 'full', redirectTo: '/landing' },
     {
         path: 'forms',
         component: FormsComponent,
@@ -30,6 +30,14 @@ const routes: Routes = [
     {
         path: 'pagos',
         component: PaypalComponent,
+    },
+    {
+        path: 'dinamics',
+        component: DinamicComponent,
+    },
+    {
+        path: '**',
+        redirectTo: '/booststrap',
     },
 ];
 @NgModule({

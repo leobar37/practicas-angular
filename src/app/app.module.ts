@@ -14,6 +14,13 @@ import { PaypalComponent } from './pages/paypal/paypal.component';
 // import { NgxPayPalModule } from 'ngx-paypal';
 import { HttpClientModule } from '@angular/common/http';
 import { SlideFrameworComponent } from './pages/slide-framewor/slide-framewor.component';
+import { DirectiveDirective } from './directives/directive.directive';
+import { HighlightDirective } from './directives/highlight.directive';
+import { AdDirective } from './directives/ad.directive';
+import { BannerComponent } from './components/banner/banner.component';
+import { AdGaleryComponent } from './components/ad-galery/ad-galery.component';
+import { AdtextComponent } from './components/adtext/adtext.component';
+import { DinamicComponent } from './dinamic/dinamic.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -24,6 +31,13 @@ import { SlideFrameworComponent } from './pages/slide-framewor/slide-framewor.co
         FormsComponent,
         PaypalComponent,
         SlideFrameworComponent,
+        DirectiveDirective,
+        HighlightDirective,
+        AdDirective,
+        BannerComponent,
+        AdGaleryComponent,
+        AdtextComponent,
+        DinamicComponent,
     ],
     imports: [
         HttpClientModule,
@@ -33,6 +47,7 @@ import { SlideFrameworComponent } from './pages/slide-framewor/slide-framewor.co
         AppRoutingModule,
         BrowserAnimationsModule,
     ],
+    entryComponents: [AdGaleryComponent, AdtextComponent],
     providers: [],
     bootstrap: [AppComponent],
 })
